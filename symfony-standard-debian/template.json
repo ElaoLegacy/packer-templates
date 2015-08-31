@@ -22,7 +22,7 @@
             "ssh_password"         : "root",
             "ssh_wait_timeout"     : "30m",
             "shutdown_command"     : "/sbin/shutdown -h now",
-            "http_directory"       : "debian/debian-7-amd64",
+            "http_directory"       : "debian-7-amd64",
             "boot_command"         : [
                 "<esc><wait>",
                 "install <wait>",
@@ -55,41 +55,41 @@
         {
             "type"    : "shell",
             "scripts" : [
-                "debian/debian-7-amd64/scripts/nfs.sh",
-                "debian/debian-7-amd64/scripts/grub.sh",
-                "debian/debian-7-amd64/scripts/virtualbox.sh"
+                "debian-7-amd64/scripts/nfs.sh",
+                "debian-7-amd64/scripts/grub.sh",
+                "debian-7-amd64/scripts/virtualbox.sh"
             ],
             "only"    : ["virtualbox-iso"]
         },
         {
             "type"    : "shell",
             "scripts" : [
-                "debian/debian-7-amd64/scripts/ansible.sh"
+                "debian-7-amd64/scripts/ansible.sh"
             ]
         },
         {
             "type"            : "ansible-local",
-            "playbook_file"   : "debian/debian-7-amd64/ansible/playbook.yml",
-            "playbook_dir"    : "debian/debian-7-amd64/ansible",
+            "playbook_file"   : "debian-7-amd64/ansible/playbook.yml",
+            "playbook_dir"    : "debian-7-amd64/ansible",
             "extra_arguments" : ["-e '_user={{user `ansible_user`}} _packer_builder={{user `packer_builder`}}'"],
             "only"            : ["virtualbox-iso"]
         },
         {
             "type"            : "ansible-local",
-            "playbook_file"   : "debian/symfony-standard-debian/ansible/playbook.yml",
-            "playbook_dir"    : "debian/symfony-standard-debian/ansible",
+            "playbook_file"   : "symfony-standard-debian/ansible/playbook.yml",
+            "playbook_dir"    : "symfony-standard-debian/ansible",
             "extra_arguments" : ["-e '_user={{user `ansible_user`}} _packer_builder={{user `packer_builder`}}'"]
         },
         {
             "type"    : "shell",
             "scripts" : [
-                "debian/debian-7-amd64/scripts/clean-apt.sh"
+                "debian-7-amd64/scripts/clean-apt.sh"
             ]
         },
         {
             "type"    : "shell",
             "scripts" : [
-                "debian/debian-7-amd64/scripts/clean-virtualbox.sh"
+                "debian-7-amd64/scripts/clean-virtualbox.sh"
             ],
             "only"    : ["virtualbox-iso"]
         }

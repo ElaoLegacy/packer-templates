@@ -32,9 +32,9 @@ help:
 ## Build
 build: clean roles
 ifeq (${type}, docker)
-	TMPDIR=~/tmp/packer packer build -only=docker -var 'ansible_user=docker' -var 'packer_builder=docker' -var 'version=${version}' debian/${template}/template.json
+	TMPDIR=~/tmp/packer packer build -only=docker -var 'ansible_user=docker' -var 'packer_builder=docker' -var 'version=${version}' ${template}/template.json
 else
-	packer build -only=virtualbox-iso -var 'ansible_user=vagrant' -var 'packer_builder=virtualbox-iso' -var 'version=${version}' debian/${template}/template.json
+	packer build -only=virtualbox-iso -var 'ansible_user=vagrant' -var 'packer_builder=virtualbox-iso' -var 'version=${version}' ${template}/template.json
 endif
 
 ## Test
@@ -44,6 +44,7 @@ ifeq (${type}, docker)
 else
 	printf "${COLOR_INFO}Add vagrant box ${COLOR_RESET}\n"
 	vagrant box add ${template}-${version}-virtualbox.box --name ${template} --force
+	-cd ${template}/test/vagrant && vagrant destroy --force && vagrant up && vagrant ssh
 endif
 
 ## Publish
@@ -64,10 +65,10 @@ clean:
 
 ## Roles
 roles:
-	printf "${COLOR_INFO}Install ${COLOR_RESET}${template}${COLOR_INFO} ansible galaxy roles into ${COLOR_RESET}debian/${template}/ansible/roles:\n"
+	printf "${COLOR_INFO}Install ${COLOR_RESET}${template}${COLOR_INFO} ansible galaxy roles into ${COLOR_RESET}${template}/ansible/roles:\n"
 ifeq (${template}, symfony-standard-debian)
-	ansible-galaxy install -f -r debian/debian-7-amd64/ansible/roles.yml -p debian/debian-7-amd64/ansible/roles
-	ansible-galaxy install -f -r debian/symfony-standard-debian/ansible/roles.yml -p debian/symfony-standard-debian/ansible/roles
+	ansible-galaxy install -f -r debian-7-amd64/ansible/roles.yml -p debian-7-amd64/ansible/roles
+	ansible-galaxy install -f -r symfony-standard-debian/ansible/roles.yml -p symfony-standard-debian/ansible/roles
 else
-	ansible-galaxy install -f -r debian/${template}/ansible/roles.yml -p debian/${template}/ansible/roles
+	ansible-galaxy install -f -r ${template}/ansible/roles.yml -p ${template}/ansible/roles
 endif

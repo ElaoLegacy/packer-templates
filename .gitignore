@@ -3,17 +3,17 @@
 /*.tar
 /output-*
 
-/debian/debian-7-amd64/ansible/roles/*
-!debian/debian-7-amd64/ansible/roles/.gitkeep
-/debian/debian-7-amd64/vagrant/.vagrant/
-/debian/debian-7-amd64/vagrant/ansible.cfg
+/debian-7-amd64/ansible/roles/*
+!debian-7-amd64/ansible/roles/.gitkeep
+/debian-7-amd64/test/vagrant/.vagrant/
+/debian-7-amd64/test/vagrant/ansible.cfg
 
-/debian/debian-8-amd64/ansible/roles/*
-!debian/debian-8-amd64/ansible/roles/.gitkeep
-/debian/debian-8-amd64/vagrant/.vagrant/
-/debian/debian-8-amd64/vagrant/ansible.cfg
+/debian-8-amd64/ansible/roles/*
+!debian-8-amd64/ansible/roles/.gitkeep
+/debian-8-amd64/test/vagrant/.vagrant/
+/debian-8-amd64/test/vagrant/ansible.cfg
 
-/debian/symfony-standard-debian/ansible/roles/*
-!debian/symfony-standard-debian/ansible/roles/.gitkeep
-/debian/symfony-standard-debian/vagrant/.vagrant/
-/debian/symfony-standard-debian/vagrant/ansible.cfg
+/symfony-standard-debian/ansible/roles/*
+!symfony-standard-debian/ansible/roles/.gitkeep
+/symfony-standard-debian/test/vagrant/.vagrant/
+/symfony-standard-debian/test/vagrant/ansible.cfg

@@ -16,10 +16,10 @@
  * Ruby 2.2.1p85 (bearstech)
  * Gem 2.4.5 (bearstech)
  * Python 2.7.3
- * Pip 7.1.0
- * Node 0.12.6 (nodesource)
- * Npm 2.11.2 (nodesource)
- * Php 5.6.10 (dotdeb)
+ * Pip 7.1.2
+ * Node 0.12.7 (nodesource)
+ * Npm 2.11.3 (nodesource)
+ * Php 5.6.12 (dotdeb)
    * php5-common, php5-cli, php5-fpm
    * php5-readline, php5-intl, php5-curl
    * php5-xdebug
@@ -30,7 +30,7 @@
  * Supervisor 3.1.3
  * Log.io
  * Capifony 2.8.6
- * Bower 1.4.1
+ * Bower 1.5.2
  * Gulp 3.9.0
 
 ## Miscellaneous ##
