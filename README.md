@@ -2,17 +2,17 @@
 
 ## Requirements
 
-  - packer >= 0.8.0
+  - packer >= 0.8.6
 
 ### Vagrant
 
-  - vagrant >= 1.7.2
+  - vagrant >= 1.7.4
   - ansible >= 1.9.2
 
 ### Docker
 
-  - docker >= 1.7.0
-  - docker-machine >= 0.3.0
+  - docker >= 1.8.1
+  - docker-machine >= 0.4.1
 
 ## Usage
 
