@@ -37,9 +37,9 @@ help:
 ## Build
 build: clean roles
 ifeq (${type}, docker)
-	TMPDIR=~/tmp/packer packer build -only=docker -var 'ansible_user=docker packer_builder=docker version=${version}' debian/${template}/template.json
+	TMPDIR=~/tmp/packer packer build -only=docker -var 'ansible_user=docker' -var 'packer_builder=docker' -var 'version=${version}' debian/${template}/template.json
 else
-	packer build -only=virtualbox-iso -var 'ansible_user=vagrant packer_builder=virtualbox-iso version=${version}' debian/${template}/template.json
+	packer build -only=virtualbox-iso -var 'ansible_user=vagrant' -var 'packer_builder=virtualbox-iso' -var 'version=${version}' debian/${template}/template.json
 endif
 
 ## Test
