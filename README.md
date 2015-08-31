@@ -21,12 +21,22 @@
 Examples:
 
     # Build debian-7-amd64 on vagrant
-    $ make build template=debian-7-amd64 type=vagrant
+    $ make build template=debian-7-amd64 type=vagrant version=x.x.x
+
+    # Build && Publish debian-7-amd64 on vagrant
+    $ make build publish template=debian-7-amd64 type=vagrant version=x.x.x
+
     # Build symfony-standard-debian on vagrant
-    $ make build template=symfony-standard-debian type=vagrant
+    $ make build template=symfony-standard-debian type=vagrant version=x.x.x
+
+    # Build && Publish symfony-standard-debian on vagrant
+    $ make build publish template=symfony-standard-debian type=vagrant version=x.x.x
+
     # Build debian-7-amd64 on docker
-    $ make build template=debian-7-amd64 type=docker
+    $ make build template=debian-7-amd64 type=docker version=x.x.x
+
     # Test debian-7-amd64 on vagrant
-    $ make test template=debian-7-amd64 type=vagrant
+    $ make test template=debian-7-amd64 type=vagrant version=x.x.x
+
     # Publish debian-7-amd64 on vagrant
-    $ make publish template=debian-7-amd64 type=vagrant
+    $ make publish template=debian-7-amd64 type=vagrant version=x.x.x
