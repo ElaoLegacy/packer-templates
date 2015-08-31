@@ -7,11 +7,6 @@ COLOR_INFO    = \033[32m
 COLOR_COMMENT = \033[33m
 COLOR_ERROR   = \033[31m
 
-## Defaults
-template = debian-7-amd64
-type     = vagrant
-version  = 1.0.2
-
 ## Help
 help:
 	printf "${COLOR_COMMENT}Usage:${COLOR_RESET}\n"
