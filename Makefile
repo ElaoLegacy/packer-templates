@@ -49,8 +49,8 @@ endif
 ## Publish
 publish:
 ifeq (${type}, docker)
-	printf "${COLOR_INFO}Push dockr image ${COLOR_RESET}\n"
-	cat ${template}-${version}-docker.tar | docker import - elao/${template}:latest
+	printf "${COLOR_INFO}Push docker image ${COLOR_RESET}\n"
+	cat ${template}-${version}-docker.tar | docker import - elao/${template}:${version}
 	docker push elao/${template}
 else
 	printf "${COLOR_INFO}Upload vagrant box ${COLOR_RESET}\n"
