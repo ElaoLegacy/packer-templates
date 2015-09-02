@@ -32,8 +32,8 @@ help:
 ## Build
 build: clean roles
 ifeq (${type}, docker)
-	mkdir -p /tmp/packer
-	TMPDIR=/tmp/packer packer build -only=docker -var 'ansible_user=docker' -var 'packer_builder=docker' -var 'version=${version}' ${template}/template.json
+	mkdir -p ~/.packer.d/tmp
+	TMPDIR=~/.packer.d/tmp packer build -only=docker -var 'ansible_user=docker' -var 'packer_builder=docker' -var 'version=${version}' ${template}/template.json
 else
 	packer build -only=virtualbox-iso -var 'ansible_user=vagrant' -var 'packer_builder=virtualbox-iso' -var 'version=${version}' ${template}/template.json
 endif
