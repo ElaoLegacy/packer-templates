@@ -10,6 +10,7 @@
    * Vim 7.4 (backports)
    * Git 1.9.1 (backports)
    * Oh-my-zsh
+   * Make 3.81
 
 ## Miscellaneous ##
 

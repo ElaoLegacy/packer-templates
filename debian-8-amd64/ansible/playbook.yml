@@ -90,3 +90,4 @@
     - { role: elao.ohmyzsh }
     - { role: elao.vim }
     - { role: elao.alternatives }
+    - { role: elao.make }

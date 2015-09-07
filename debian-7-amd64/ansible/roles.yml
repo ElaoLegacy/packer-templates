@@ -37,3 +37,7 @@
 - src:     https://github.com/ElaoInfra/ansible-role-alternatives
   name:    elao.alternatives
   version: origin/1.0
+
+- src:     https://github.com/ElaoInfra/ansible-role-make
+  name:    elao.make
+  version: origin/1.0

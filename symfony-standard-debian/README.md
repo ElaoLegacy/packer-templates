@@ -10,8 +10,8 @@
    * Vim 7.4 (backports)
    * Git 1.9.1 (backports)
    * Oh-my-zsh
+   * Make 3.81
 
- * Make 3.81
  * Curl 7.26.0
  * Ruby 2.2.1p85 (bearstech)
  * Gem 2.4.5 (bearstech)
