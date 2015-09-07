@@ -6,7 +6,7 @@
    * Openssh-server
    * Nfs support (nfs-common, cachefilesd)
    * VirtualBox - Guest Additions 5.0.2 (dkms, linux-headers)
-   * Ansible 1.9.2 (python-pycurl)
+   * Ansible 1.9.3 (python-pycurl)
    * Vim 7.4 (backports)
    * Git 1.9.1 (backports)
    * Oh-my-zsh
@@ -19,7 +19,7 @@
  * Pip 7.1.2
  * Node 0.12.7 (nodesource)
  * Npm 2.11.3 (nodesource)
- * Php 5.6.12 (dotdeb)
+ * Php 5.6.13 (dotdeb)
    * php5-common, php5-cli, php5-fpm
    * php5-readline, php5-intl, php5-curl
    * php5-xdebug
