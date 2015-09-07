@@ -2,7 +2,7 @@
 
 62Go ext4, 2Go swap
 
- * Debian 7.8 - amd64
+ * Debian 7.9 - amd64
    * Openssh-server
    * Nfs support (nfs-common, cachefilesd)
    * VirtualBox - Guest Additions 5.0.2 (dkms, linux-headers)
