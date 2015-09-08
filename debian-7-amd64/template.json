@@ -57,27 +57,26 @@
         {
             "type"    : "shell",
             "scripts" : [
-                "debian-7-amd64/scripts/nfs.sh",
-                "debian-7-amd64/scripts/grub.sh",
-                "debian-7-amd64/scripts/virtualbox.sh"
-            ],
-            "only"    : ["virtualbox-iso"]
+                "debian-7-amd64/scripts/apt.sh",
+                "debian-7-amd64/scripts/bzip2.sh",
+                "debian-7-amd64/scripts/ansible.sh"
+            ]
         },
         {
             "type"    : "shell",
             "scripts" : [
-                "debian-7-amd64/scripts/openssh-server.sh",
-                "debian-7-amd64/scripts/openjdk-7.sh",
-                "debian-7-amd64/scripts/bzip2.sh",
-                "debian-7-amd64/scripts/permissions-serv.sh"
+                "debian-7-amd64/scripts/openssh-server.sh"
             ],
             "only"    : ["docker"]
         },
         {
             "type"    : "shell",
             "scripts" : [
-                "debian-7-amd64/scripts/ansible.sh"
-            ]
+                "debian-7-amd64/scripts/nfs.sh",
+                "debian-7-amd64/scripts/grub.sh",
+                "debian-7-amd64/scripts/virtualbox.sh"
+            ],
+            "only"    : ["virtualbox-iso"]
         },
         {
             "type"            : "ansible-local",
