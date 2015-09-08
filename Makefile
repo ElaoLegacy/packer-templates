@@ -54,7 +54,6 @@ ifeq (${type}, docker)
 	printf "${COLOR_INFO}Push docker image ${COLOR_RESET}\n"
 	cat ${template}-${version}-docker.tar | docker import - elao/${template}:${version}
 	docker tag -f elao/${template}:${version} elao/${template}
-	docker push elao/${template}:${version}
 	docker push elao/${template}
 else
 	printf "${COLOR_INFO}Upload vagrant box ${COLOR_RESET}\n"
