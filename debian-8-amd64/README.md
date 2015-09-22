@@ -2,13 +2,13 @@
 
 62Go ext4, 2Go swap
 
- * Debian 8.1 - amd64
+ * Debian 8.2 - amd64
    * Openssh-server
    * Nfs support (nfs-common, cachefilesd)
-   * VirtualBox - Guest Additions 4.3.28 (dkms, linux-headers)
-   * Ansible 1.9.2 (python-pycurl)
-   * Vim 7.4 (backports)
-   * Git 1.9.1 (backports)
+   * VirtualBox - Guest Additions 5.0.4 (dkms, linux-headers)
+   * Ansible 1.9.3 (python-pycurl)
+   * Vim 7.4
+   * Git 2.1.4
    * Oh-my-zsh
 
 ## Miscellaneous ##
